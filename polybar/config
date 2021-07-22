@@ -1,0 +1,100 @@
+; ---
+; Lucy's Dotfiles
+; https://github.com/lucyy-mc/dotfiles
+; ---
+;
+; Polybar config
+
+; Set colour variables
+[col]
+bg = #242424
+fg = #c5c5c5
+sel = #ec7279
+
+; Base bar that others inherit from
+[bar/common]
+background = ${col.bg}
+height = 26
+offset-x = 2
+offset-y = 2
+
+; make positioning work with i3. this needs some working around when using multiple monitors
+override-redirect = true
+wm-restack = i3
+
+; border with radius to match i3
+radius = 8
+border-size = 0
+border-color = #192133
+
+
+font-0 = NotoSans-Medium:size=11;3
+font-1 = FluentSystemIcons\-Regular:size=12;5 
+
+
+module-margin = 2
+padding = 1
+
+[bar/left]
+inherit = bar/common
+width = 145px
+modules-left = i3
+#tray-offset-x = 650
+#tray-position = center
+#tray-detached = true
+
+[bar/tray]
+inherit = bar/common
+width = 100px
+offset-x = 100%:-392px
+modules-right = blank
+tray-position = left
+tray-detatched = true
+
+[bar/center]
+inherit = bar/common
+width = 100%:-553px
+modules-right = blank
+offset-x = 149px
+
+[bar/right]
+inherit = bar/common
+width = 400px
+modules-right = volume date time
+offset-x = 100%:-402px
+
+
+[module/i3]
+type = internal/i3
+label-focused-foreground = ${col.sel}
+index-sort = true
+label-separator = " " 
+
+[module/battery]
+type = internal/battery
+poll-interval = 5
+
+
+[module/time]
+type = internal/date
+interval = 15
+time = %l:%M
+label =  %time%
+
+[module/date]
+type = internal/date
+interval = 60
+date = %a %d %b
+label =  %date%
+
+[module/volume]
+type = internal/pulseaudio
+format-volume =  <label-volume>
+format-muted =  <label-volume>
+
+#workaround cause bars with no modules don't seem to display
+[module/blank]
+type = custom/text
+content = "  " 
+
+; vim: ft=dosini
