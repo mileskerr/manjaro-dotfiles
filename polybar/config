@@ -1,22 +1,24 @@
-; ---
-; Lucy's Dotfiles
+; 
+; based on Lucy's Dotfiles:
 ; https://github.com/lucyy-mc/dotfiles
-; ---
-;
-; Polybar config
 
-; Set colour variables
+
+; POLYBAR CONFIG
+
+; Set color variables
 [col]
-bg = #242424
+bg = #333333
 fg = #c5c5c5
 sel = #ec7279
 
 ; Base bar that others inherit from
 [bar/common]
 background = ${col.bg}
+foreground = ${col.fg}
 height = 26
 offset-x = 2
 offset-y = 2
+
 
 ; make positioning work with i3. this needs some working around when using multiple monitors
 override-redirect = true
@@ -25,72 +27,125 @@ wm-restack = i3
 ; border with radius to match i3
 radius = 8
 border-size = 0
-border-color = #192133
 
 
 font-0 = NotoSans-Medium:size=11;3
-font-1 = FluentSystemIcons\-Regular:size=12;5 
+font-1 = fontawesome-webfont:size=12;3 
+font-2 = unifont-13.0.06:size=11;3
+font-3 = NotoSansMono-Medium:size=10;3
 
-
-module-margin = 2
+module-margin = 1
 padding = 1
 
 [bar/left]
 inherit = bar/common
-width = 145px
+width = 118 px
 modules-left = i3
+
+
+
 #tray-offset-x = 650
 #tray-position = center
 #tray-detached = true
 
+[bar/right]
+inherit = bar/common
+width = 400px
+modules-right = battery time
+offset-x = 100%:-402px
+
+[bar/fill]
+inherit = bar/common
+background = #242424
+width = 100%:-1040px
+modules-left = blank
+offset-x = 122
+
+[bar/spotify]
+inherit = bar/common
+padding = 4
+module-margin = 1
+width = 512
+modules-left = prev 
+modules-right = next playlist
+offset-x = 100%:-916px
+
+[bar/playing]
+inherit = bar/common
+padding = 0
+width = 410
+modules-center = spotify
+offset-x = 100%:-878px
+
 [bar/tray]
 inherit = bar/common
-width = 100px
+background = #333333
+width = 50px
 offset-x = 100%:-392px
 modules-right = blank
 tray-position = left
 tray-detatched = true
 
-[bar/center]
-inherit = bar/common
-width = 100%:-553px
-modules-right = blank
-offset-x = 149px
-
-[bar/right]
-inherit = bar/common
-width = 400px
-modules-right = volume date time
-offset-x = 100%:-402px
-
-
 [module/i3]
 type = internal/i3
-label-focused-foreground = ${col.sel}
 index-sort = true
-label-separator = " " 
+label-unfocused-foreground = #7f7f7f
 
+[module/spotify]
+type = custom/script
+exec = ~/.config/polybar/spotify.sh
+tail = false
+click-left = spt playback -t && polybar -r
+interval = 30
+label = %{T4}%output%
+
+
+[module/prev]
+type = custom/script
+exec = echo "llalal"
+click-left = spt playback -p && polybar -r
+label = ◀◀
+
+[module/next]
+type = custom/script
+exec = echo "nothing to see here"
+click-left = spt playback -n && polybar -r
+label = ▶▶
+
+[module/playlist]
+type = custom/script
+exec = echo "nothing to see here"
+click-left = rofi -show playlist -modi "playlist:~/.config/rofi/playlists.sh"
+label = 
 [module/battery]
 type = internal/battery
 poll-interval = 5
-
+format-discharging = <ramp-capacity> <label-discharging>
+format-charging = <animation-charging> <label-charging>
+label-charging = %percentage%%
+label-discharging = %percentage%%
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
+#ramp-capacity-0 = 1
+#ramp-capacity-1 = 2
+#ramp-capacity-2 = 3
+#ramp-capacity-3 = 4
+#ramp-capacity-4 = 5
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+charging-framerate = 400
 
 [module/time]
 type = internal/date
 interval = 15
 time = %l:%M
-label =  %time%
-
-[module/date]
-type = internal/date
-interval = 60
-date = %a %d %b
-label =  %date%
-
-[module/volume]
-type = internal/pulseaudio
-format-volume =  <label-volume>
-format-muted =  <label-volume>
+label = %time%
 
 #workaround cause bars with no modules don't seem to display
 [module/blank]

@@ -1,0 +1,4 @@
+configuration {
+	theme: "normal";
+}
+/* vim:ft=css
