@@ -1,6 +1,8 @@
 
 #i have no clue how to do bash scripting, yes, this is probably janky af
 
+#this script retrieves the current artist and track, makes sure there are no errors, and puts it into a nice format to be sent back to polybar.
+
 
 function track {
 	spt playback -f %t 2>/dev/null

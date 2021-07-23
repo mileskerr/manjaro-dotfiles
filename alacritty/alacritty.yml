@@ -1,8 +1,8 @@
 
 
+#this is a color scheme based off of edge dark default, but with neutral grays.
 
 schemes:  
-  ### Edge (Dark Default variant)
   edge_dark_def:  &edge_dark_default
     primary:
       background: "#242424"
@@ -31,6 +31,5 @@ schemes:
       cyan: "0x5dbbc1"
       white: "#c5c5c5"
 
-### Choose one of the & tags from the schemes listed above
 colors: *edge_dark_default
 
