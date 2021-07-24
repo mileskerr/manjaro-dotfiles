@@ -1,9 +1,8 @@
-# ---
-# Lucy's Dotfiles
+# Based off of Lucy's Dotfiles:
 # https://github.com/lucyy-mc/dotfiles
-# ---
-#
-# Dunst config
+
+
+# DUNST CONFIG
 
 [global]
 # primary monitor, don't follow mouse
@@ -75,7 +74,7 @@ history_length = 20
 
 # dmenu and browser path
 dmenu = /usr/bin/rofi -dmenu
-browser = /usr/bin/firefox -new-tab
+browser = /usr/bin/brave -new-tab
 
 # window settings
 title = Dunst
@@ -94,7 +93,7 @@ mouse_right_click = close_all
 [urgency_low]
 background = "#242424"
 foreground = "#7f7f7f"
-timeout = 10
+timeout = 8
 
 [urgency_normal]
 background = "#333333"
@@ -106,4 +105,3 @@ background = "#ec7279"
 foreground = "#242424"
 timeout = 20
 
-# vim: ft=cfg

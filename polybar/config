@@ -63,11 +63,11 @@ offset-x = 122
 
 [bar/spotify]
 inherit = bar/common
-padding = 4
-module-margin = 1
-width = 512
-modules-left = prev 
-modules-right = next playlist
+padding = 2
+separator = " "
+module-margin = 0.9
+width = 100
+modules-left = prev pause next playlist
 offset-x = 100%:-916px
 
 [bar/playing]
@@ -75,7 +75,7 @@ inherit = bar/common
 padding = 0
 width = 410
 modules-center = spotify
-offset-x = 100%:-878px
+offset-x = 100%:-814px
 
 [bar/tray]
 inherit = bar/common
@@ -93,24 +93,29 @@ label-unfocused-foreground = #7f7f7f
 
 [module/spotify]
 type = custom/script
-exec = ~/.config/polybar/spotify.sh
+exec = ~/.config/polybar/spotify/now_playing.sh
 tail = false
-click-left = spt playback -t && polybar -r
-interval = 30
+click-left = ~/.config/polybar/spotify/toggle.sh
+interval = 120
 label = %{T4}%output%
 
+[module/pause]
+type = custom/script
+exec = echo "do absolutely nothing"
+click-left = ~/.config/polybar/spotify/toggle.sh
+label = ⏯
 
 [module/prev]
 type = custom/script
-exec = echo "llalal"
-click-left = spt playback -p && polybar -r
-label = ◀◀
+exec = echo "do absolutely nothing"
+click-left = ~/.config/polybar/spotify/skip_prev.sh
+label = ⏪
 
 [module/next]
 type = custom/script
 exec = echo "nothing to see here"
-click-left = spt playback -n && polybar -r
-label = ▶▶
+click-left = ~/.config/polybar/spotify/skip_next.sh
+label = ⏩
 
 [module/playlist]
 type = custom/script
