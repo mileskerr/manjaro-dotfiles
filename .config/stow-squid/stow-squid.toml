@@ -1,0 +1,129 @@
+
+[[files]]
+name = "config"
+deployed = "/home/milo/.config/polybar/config"
+origin = "/home/milo/dotfiles/.config/polybar/config"
+
+[[files]]
+name = "start.sh"
+deployed = "/home/milo/.config/polybar/start.sh"
+origin = "/home/milo/dotfiles/.config/polybar/start.sh"
+
+[[files]]
+name = "alacritty.yml"
+deployed = "/home/milo/.config/alacritty/alacritty.yml"
+origin = "/home/milo/dotfiles/.config/alacritty/alacritty.yml"
+
+[[files]]
+name = "bookmarks.txt"
+deployed = "/home/milo/.config/blender/2.93/config/bookmarks.txt"
+origin = "/home/milo/dotfiles/.config/blender/2.93/config/bookmarks.txt"
+
+[[files]]
+name = "platform_support.txt"
+deployed = "/home/milo/.config/blender/2.93/config/platform_support.txt"
+origin = "/home/milo/dotfiles/.config/blender/2.93/config/platform_support.txt"
+
+[[files]]
+name = "startup.blend"
+deployed = "/home/milo/.config/blender/2.93/config/startup.blend"
+origin = "/home/milo/dotfiles/.config/blender/2.93/config/startup.blend"
+
+[[files]]
+name = "userpref.blend"
+deployed = "/home/milo/.config/blender/2.93/config/userpref.blend"
+origin = "/home/milo/dotfiles/.config/blender/2.93/config/userpref.blend"
+
+[[files]]
+name = "config"
+deployed = "/home/milo/.config/i3/config"
+origin = "/home/milo/dotfiles/.config/i3/config"
+
+[[files]]
+name = "wallpaper.sh"
+deployed = "/home/milo/.config/i3/wallpaper.sh"
+origin = "/home/milo/dotfiles/.config/i3/wallpaper.sh"
+
+[[files]]
+name = "xrandr-fix.sh"
+deployed = "/home/milo/.config/i3/xrandr-fix.sh"
+origin = "/home/milo/dotfiles/.config/i3/xrandr-fix.sh"
+
+[[files]]
+name = "config"
+deployed = "/home/milo/.config/polybar/config"
+origin = "/home/milo/dotfiles/.config/polybar/config"
+
+[[files]]
+name = "start.sh"
+deployed = "/home/milo/.config/polybar/start.sh"
+origin = "/home/milo/dotfiles/.config/polybar/start.sh"
+
+[[files]]
+name = "config.rasi"
+deployed = "/home/milo/.config/rofi/config.rasi"
+origin = "/home/milo/dotfiles/.config/rofi/config.rasi"
+
+[[files]]
+name = "normal.rasi"
+deployed = "/home/milo/.config/rofi/normal.rasi"
+origin = "/home/milo/dotfiles/.config/rofi/normal.rasi"
+
+[[files]]
+name = "playlists.sh"
+deployed = "/home/milo/.config/rofi/playlists.sh"
+origin = "/home/milo/dotfiles/.config/rofi/playlists.sh"
+
+[[files]]
+name = "stow-squid.toml"
+deployed = "/home/milo/.config/stow-squid/stow-squid.toml"
+origin = "/home/milo/dotfiles/.config/stow-squid/stow-squid.toml"
+
+[[files]]
+name = "picom.conf"
+deployed = "/home/milo/.config/picom/picom.conf"
+origin = "/home/milo/dotfiles/.config/picom/picom.conf"
+
+[[files]]
+name = "spotifyd.conf"
+deployed = "/home/milo/.config/spotifyd/spotifyd.conf"
+origin = "/home/milo/dotfiles/.config/spotifyd/spotifyd.conf"
+
+[[files]]
+name = "DiscordRecolor.theme.css"
+deployed = "/home/milo/.config/BetterDiscord/themes/DiscordRecolor.theme.css"
+origin = "/home/milo/dotfiles/.config/BetterDiscord/themes/DiscordRecolor.theme.css"
+
+
+[[files]]
+name = ".Xresources"
+deployed = "/home/milo/.Xresources"
+origin = "/home/milo/dotfiles/.Xresources"
+
+[[files]]
+name = ".bashrc"
+deployed = "/home/milo/.bashrc"
+origin = "/home/milo/dotfiles/.bashrc"
+
+[[files]]
+name = "tabletset.sh"
+deployed = "/home/milo/.scripts/tabletset.sh"
+origin = "/home/milo/dotfiles/.scripts/tabletset.sh"
+
+
+[[files]]
+name = "stow-add.sh"
+deployed = "/home/milo/.scripts/stow-add.sh"
+origin = "/home/milo/dotfiles/.scripts/stow-add.sh"
+
+[[files]]
+name = "stow-squid.toml"
+deployed = "/home/milo/.config/stow-squid/stow-squid.toml"
+origin = "/home/milo/dotfiles/.config/stow-squid/stow-squid.toml"
+
+[[files]]
+name = "dunstrc"
+origin = "/home/milo/dotfiles/.config/dunst/dunstrc"
+deployed = "/home/milo/.config/dunst/dunstrc"
+
+

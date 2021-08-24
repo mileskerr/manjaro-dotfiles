@@ -1,0 +1,46 @@
+/**
+ * @name DiscordRecolor
+ * @description Allows you to customize Discord's native Color Scheme
+ * @author DevilBro
+ * @version 1.0.0
+ * @authorId 278543574059057154
+ * @invite Jx3TjNS
+ * @donate https://www.paypal.me/MircoWittrien
+ * @patreon https://www.patreon.com/MircoWittrien
+ * @website https://mwittrien.github.io/
+ * @source https://github.com/mwittrien/BetterDiscordAddons/tree/master/Themes/DiscordRecolor/
+ * @updateUrl https://mwittrien.github.io/BetterDiscordAddons/Themes/DiscordRecolor/DiscordRecolor.theme.css
+ */
+
+/* To change the colors, change the variables inside the root {}, do NOT change the @import url() */
+
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/DiscordRecolor/DiscordRecolor.css);
+
+/* All colors are in RGB format (red, green, blue) use: https://www.google.com/search?q=colorpicker	*/
+
+:root {
+	--font:						Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;					/*	General Font				*/
+	--settingsicons:			1;						/*	Use Settings Icons in User/Server/Channel Settings: 1 = yes, 0 = no			*/
+	
+	--accentcolor: 				88,95,226;				/*	Blurple				 - 	default:	88,101,242		 - 	hex:	#585fe2		*/
+	--accentcolor2: 			211,138,234;			/*	Boostpink			 - 	default:	255,115,250		 - 	hex:	#d38aea		*/
+	--linkcolor: 				108,182,235;				/*	Link Color			 - 	default:	0,176,244		 - 	hex:	#6cb6eb		*/
+	--mentioncolor: 			108,182,235;				/*	Highlight Color		 - 	default:	250,166,26		 - 	hex:	#6cb6eb		*/
+	--successcolor: 			59,165,92;				/*	Success Color		 - 	default:	59,165,92		 - 	hex:	#a0c980		*/
+	--warningcolor: 			108,182,235;				/*	Warning Color		 - 	default:	250,166,26		 - 	hex:	#deb974		*/
+	--dangercolor:  			236,114,121;				/*	Danger Color		 - 	default:	237,66,69		 - 	hex:	#ec7279		*/
+	
+	--textbrightest: 			228,228,228;			/*	Text Color 1		 - 	default:	255,255,255		 - 	hex:	#e4e4e4		*/
+	--textbrighter: 			222,222,222;			/*	Text Color 2		 - 	default:	220,221,222		 - 	hex:	#dcdcdc		*/
+	--textbright: 				185,185,185;			/*	Text Color 3		 - 	default:	185,187,190		 - 	hex:	#b9b9b9		*/
+	--textdark: 				140,140,140;			/*	Text Color 4		 - 	default:	142,146,151		 - 	hex:	#7f7f7f		*/
+	--textdarker: 				115,115,115;			/*	Text Color 5		 - 	default:	114,118,125		 - 	hex:	#727272		*/
+	--textdarkest: 				95,95,95;				/*	Text Color 6		 - 	default:	79,84,92		 - 	hex:	#5f5f5f		*/
+	
+	--backgroundaccent: 		64,64,64;				/*	Background Accent	 - 	default:	64,68,75		 - 	hex:	#404040		*/
+	--backgroundprimary: 		54,54,54;				/*	Background 1		 - 	default:	54,57,63		 - 	hex:	#363636		*/
+	--backgroundsecondary: 		51,51,51;				/*	Background 2		 - 	default:	47,49,54		 - 	hex:	#333333		*/
+	--backgroundsecondaryalt: 	43,43,43;				/*	Background 3		 - 	default:	41,43,47		 - 	hex:	#2b2b2b		*/
+	--backgroundtertiary: 		40,40,40;				/*	Background 4		 - 	default:	32,34,37		 - 	hex:	#282828		*/
+	--backgroundfloating: 		36,36,36;					/*	Background Elevated	 - 	default:	24,25,28		 - 	hex:	#242424		*/
+}

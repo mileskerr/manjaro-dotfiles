@@ -1,0 +1,107 @@
+# Based off of Lucy's Dotfiles:
+# https://github.com/lucyy-mc/dotfiles
+
+
+# DUNST CONFIG
+
+[global]
+# primary monitor, don't follow mouse
+monitor = 0
+follow = none
+
+# window geometry
+geometry = "956x25+962+34"
+
+# if any messages are hidden, show the count
+indicate_hidden = yes
+
+# full height of the window
+notification_height = 25
+
+# only one notif will be shown at a time so we dont need a separator
+separator_height = 0
+
+padding = 2
+horizontal_padding = 8
+
+# Padding between text and icon.
+text_icon_padding = 0
+
+# border 
+frame_width = 0
+
+# sort messages by urgency
+sort = yes
+
+# if no input is detected for a given time, notifications will be held up
+idle_threshold = 120
+
+# formatting
+font = NotoSans 11
+line_height = 10
+markup = full
+alignment = center
+vertical_alignment = center
+word_wrap = no
+
+ignore_newline = yes
+stack_duplicates = true
+hide_duplicate_count = false
+
+
+# bold summary, content, percentage progress if given
+format = "<b>%s</b> %b %p"
+
+# after this threshold, show the notification's age
+show_age_threshold = 60
+
+# where to ellipsise long lines
+ellipsize = middle
+
+
+# don't display indicators for URLs and actions
+show_indicators = no
+
+# no icons - they're too big
+icon_position = off
+
+# Should a notification popped up from history be sticky or timeout
+# as if it would normally do.
+sticky_history = yes
+
+# Maximum amount of notifications kept in history
+history_length = 20
+
+# dmenu and browser path
+dmenu = /usr/bin/rofi -dmenu
+browser = /usr/bin/brave -new-tab
+
+# window settings
+title = Dunst
+class = Dunst
+
+# round the corners 
+corner_radius = 8
+
+# when left/middle clicking, do the notification's action (or show a context menu) and close
+# when right clicking, close all
+mouse_left_click = do_action, close_current
+mouse_middle_click = do_action, close_current
+mouse_right_click = close_all
+
+
+[urgency_low]
+background = "#2f2f2f"
+foreground = "#c5c5c5"
+timeout = 8
+
+[urgency_normal]
+background = "#2f2f2f"
+foreground = "#c5c5c5"
+timeout = 10
+
+[urgency_critical]
+background = "#ec7279"
+foreground = "#242424"
+timeout = 20
+
