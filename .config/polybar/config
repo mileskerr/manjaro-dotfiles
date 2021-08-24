@@ -7,89 +7,47 @@
 
 ; Set color variables
 [col]
-bg = #333333
-fg = #c5c5c5
-sel = #ec7279
+bg = ${xrdb:background}
+fg = ${xrdb:foreground}
+sel = ${xrdb:color1}
+desel = ${xrdb:color7}
 
-; Base bar that others inherit from
+[layout]
+spacing = 4px
+height = 26px
+
 [bar/common]
-background = ${col.bg}
 foreground = ${col.fg}
-height = 26
-offset-x = 2
-offset-y = 2
-
-
-; make positioning work with i3. this needs some working around when using multiple monitors
-override-redirect = true
-wm-restack = i3
-
-; border with radius to match i3
+background = ${col.bg}
+height = ${layout.height}
+offset-x = ${layout.spacing}
+offset-y = ${layout.spacing}
 radius = 8
 border-size = 0
-
-
+override-redirect = true
+wm-restack = i3
 font-0 = NotoSans-Medium:size=11;3
 font-1 = fontawesome-webfont:size=12;3 
 font-2 = unifont-13.0.06:size=11;3
 font-3 = NotoSansMono-Medium:size=10;3
-
 module-margin = 1
 padding = 1
 
-[bar/left]
+[bar/main]
 inherit = bar/common
-width = 118 px
+width = 100%:-8
 modules-left = i3
+modules-right = battery date time
+tray-position = center
+monitor = ${env:MONITOR:}
 
 
-
-#tray-offset-x = 650
-#tray-position = center
-#tray-detached = true
-
-[bar/right]
-inherit = bar/common
-width = 400px
-modules-right = battery time
-offset-x = 100%:-402px
-
-[bar/fill]
-inherit = bar/common
-background = #242424
-width = 100%:-1040px
-modules-left = blank
-offset-x = 122
-
-[bar/spotify]
-inherit = bar/common
-padding = 2
-separator = " "
-module-margin = 0.9
-width = 100
-modules-left = prev pause next playlist
-offset-x = 100%:-916px
-
-[bar/playing]
-inherit = bar/common
-padding = 0
-width = 410
-modules-center = spotify
-offset-x = 100%:-814px
-
-[bar/tray]
-inherit = bar/common
-background = #333333
-width = 50px
-offset-x = 100%:-392px
-modules-right = blank
-tray-position = left
-tray-detatched = true
 
 [module/i3]
 type = internal/i3
 index-sort = true
-label-unfocused-foreground = #7f7f7f
+label-focused-foreground = ${col.sel}
+label-unfocused-foreground = ${col.desel}
 
 [module/spotify]
 type = custom/script
@@ -125,8 +83,8 @@ label = 
 [module/battery]
 type = internal/battery
 poll-interval = 5
-format-discharging = <ramp-capacity> <label-discharging>
-format-charging = <animation-charging> <label-charging>
+format-discharging = <label-discharging> <ramp-capacity>
+format-charging = <label-charging> <animation-charging>
 label-charging = %percentage%%
 label-discharging = %percentage%%
 ramp-capacity-0 = " "
@@ -151,6 +109,12 @@ type = internal/date
 interval = 15
 time = %l:%M
 label = %time%
+
+[module/date]
+type = internal/date
+interval = 30
+date = %b %d
+label = %date%
 
 #workaround cause bars with no modules don't seem to display
 [module/blank]

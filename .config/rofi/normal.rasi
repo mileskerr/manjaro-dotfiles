@@ -5,7 +5,7 @@
 * {
 	background-color: transparent;
 	color: #c5c5c5;
-	font: "NotoSansMono 10";
+	font: "NotoSans 10";
 }
 
 element selected {
@@ -45,12 +45,12 @@ inputbar {
 }
 
 window {
-	background-color: #333333;
-	width: 880px;
+	background-color: #2f2f2f;
+	width: 956px;
 	location: northwest;
 	height: 26px;
-	y-offset: 2px;
-	x-offset: 122px;
+	y-offset: 34px;
+	x-offset: 2px;
 	border: 0px;
         border-color: #192133;
 }

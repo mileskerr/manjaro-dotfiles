@@ -1,0 +1,12 @@
+[Bookmarks]
+[Recent]
+/home/milo/Videos/
+/home/milo/Videos/obs_recordings/
+/home/milo/Artwork/2d/2021/
+/home/milo/Artwork/3d/cyberpunk car/
+/home/milo/Artwork/3d/nasastuffs/
+/home/milo/Artwork/3d/vesta/anim1/
+/home/milo/Artwork/3d/
+/home/milo/Pictures/
+/tmp/
+/home/milo/Artwork/3d/designgraphik/

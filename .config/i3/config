@@ -22,10 +22,11 @@ font xft:NotoSans-Medium 11
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
+#fix xrandr shit
+exec_always --no-startup-id ~/.config/i3/xrandr-fix.sh
 
-
-
-
+#fix tablet for multiple monitors
+exec --no-startup-id ~/.scripts/tabletset.sh HDMI-1-0
 
 
 
@@ -99,7 +100,6 @@ bindsym $mod+p exec --no-startup-id  ~/.config/polybar/spotify/select_playlist.s
 bindsym $mod+t exec --no-startup-id  ~/.config/polybar/spotify/toggle.sh
 
 bindsym $mod+Shift+Ctrl+d exec --no-startup-id ~/.config/polybar/spotify/refresh.sh
-
 
 
 
@@ -220,6 +220,24 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="PureRef"] floating enable
+
+
+mode "resize" {
+	bindcode 44 resize shrink width 10 px or 10 ppt
+        bindcode 45 resize grow height 10 px or 10 ppt
+        bindcode 46 resize shrink height 10 px or 10 ppt
+        bindcode 47 resize grow width 10 px or 10 ppt
+	bindcode 113 resize shrink width 10 px or 10 ppt
+        bindcode 116 resize grow height 10 px or 10 ppt
+        bindcode 111 resize shrink height 10 px or 10 ppt
+        bindcode 114 resize grow width 10 px or 10 ppt
+	bindcode 36 mode "default"
+        bindcode 9 mode "default"
+        bindcode $mod+27 mode "default"
+}
+bindsym $mod+R mode "resize"
+
 
 
 
@@ -325,9 +343,9 @@ set_from_resource $term_color15    color15
   client.background       #2f2f2f
 
 # Set inner/outer gaps
-gaps inner 2
+gaps inner 4
 gaps outer -1
-gaps top 28
+gaps top 30
 
 
 #now using a picom fork for rounded corners. the i3 rounded fork was way too glitchy
