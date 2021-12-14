@@ -68,35 +68,38 @@ if ${use_color} ; then
 			eval $(dircolors -b /etc/DIR_COLORS)
 		fi
 	fi
-
-	if [[ ${EUID} == 0 ]] ; then
-		PS1='\[\033[01;31m\][\h\[\033[01;36m\] \W\[\033[01;31m\]]\$\[\033[00m\] '
-	else
-		PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
-	fi
-
 	alias ls='ls --color=auto'
 	alias grep='grep --colour=auto'
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
-else
-	if [[ ${EUID} == 0 ]] ; then
-		# show root@ when we don't have colors
-		PS1='\u@\h \W \$ '
-	else
-		PS1='\u@\h \w \$ '
-	fi
 fi
 
 unset use_color safe_term match_lhs sh
 
+#eval "$(starship init bash)"
+
+COL1="\[$(tput setaf 2)\]"
+COL2="\[$(tput setaf 11)\]"
+RESET="\[$(tput sgr0)\]"
+
+export PS1="${COL1}\w${COL2}> ${RESET}"
+
+
+
+
+alias v="vim"
+alias vim="nvim"
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
-
-
+alias amd='sudo ~/.scripts/amdgpu.sh'
+alias nvidia='sudo ~/.scripts/nvidiagpu.sh'
+alias viewgpu='cat /etc/X11/xorg.conf.d/10-gpu.conf'
+alias s='s-tui'
+alias hw='cd ~/homework/2021/'
+alias ls='ls -A --color'
 
 xhost +local:root > /dev/null 2>&1
 
@@ -112,6 +115,9 @@ shopt -s expand_aliases
 
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
+
+#xrandr --setprovideroutputsource -0x1ff NVIDIA-0
+#xrandr --auto
 
 #
 # # ex - archive extractor

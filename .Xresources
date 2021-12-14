@@ -15,11 +15,11 @@ XTerm*reverseVideo:      on
 XTerm*selectToClipboard: true
 
 *background:                      #333333
-*foreground:                      #e4e4e4
+*foreground:                      #c4c4c4
 *fading:                          8
 *fadeColor:                       black
 *cursorColor:                     #6cb6eb
-*pointerColorBackground:          #6dbbc1
+*pointerColorBackground:          #6cb6eb
 *pointerColorForeground:          #585fe2
 
 !! black dark/light
@@ -31,8 +31,8 @@ XTerm*selectToClipboard: true
 *color9:                          #ec7279
 
 !! green dark/light
-*color2:                          #c5c5c5
-*color10:                         #c5c5c5
+*color2:                          #a0c980
+*color10:                         #a0c980
 
 !! yellow dark/light
 *color3:                          #deb974
@@ -47,8 +47,8 @@ XTerm*selectToClipboard: true
 *color13:                         #d38aea
 
 !! cyan dark/light
-*color6:                          #a0c980
-*color14:                         #a0c980
+*color6:                          #5dbbc1
+*color14:                         #5dbbc1
 
 !! white dark/light
 *color7:                          #7f7f7f
