@@ -1,0 +1,56 @@
+
+
+#this is a color scheme based off of edge dark default, but with neutral grays.
+
+
+#Font configuration
+font:
+  normal:
+    family: "IBM Plex Mono"
+
+  # Point size
+  #size: 11.0
+
+  # Offset is the extra space around each character. `offset.y` can be thought
+  # of as modifying the line spacing, and `offset.x` as modifying the letter
+  # spacing.
+  #offset:
+  #  x: 0
+  #  y: 0
+
+
+
+
+
+
+schemes:  
+  edge_dark_def:  &edge_dark_default
+    primary:
+      background: "%clbg%"
+      foreground: "%clfg%"
+  
+    normal:
+      black: "%cl8%"
+      red: "%cl1%"
+      green: "%cl2%"
+      yellow: "%cl3%"
+      blue: "%cl4%"
+      magenta: "%cl5%"
+      cyan: "%cl6%"
+      white: "%clfg%"
+  
+    bright:
+      black: "%cl8%"
+      red: "%cl1%"
+      green: "%cl2%"
+      yellow: "%cl3%"
+      blue: "%cl4%"
+      magenta: "%cl5%"
+      cyan: "%cl6%"
+      white: "%clfg%"
+
+      cyan: "%cl6%"
+      white: "%clfg%"
+
+colors: *edge_dark_default
+

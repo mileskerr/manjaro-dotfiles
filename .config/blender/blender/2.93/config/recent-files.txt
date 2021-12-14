@@ -1,0 +1,10 @@
+/home/milo/Artwork/3d/Plume-Shader/plume-shader.blend
+/home/milo/Artwork/3d/perspectiv/perspective1.blend
+/home/milo/Artwork/3d/rx7/rim.blend
+/home/milo/Artwork/3d/rx7/RX7.blend
+/home/milo/Artwork/3d/cyberpunk car/cybercar.blend
+/home/milo/Artwork/2d/2021/ryuko.blend
+/home/milo/Artwork/3d/nasastuffs/untitled.blend
+/home/milo/Artwork/3d/nasastuffs/spirit.blend
+/home/milo/Artwork/3d/nasastuffs/rhea.blend
+/home/milo/Artwork/3d/nasastuffs/farside.blend

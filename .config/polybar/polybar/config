@@ -1,0 +1,129 @@
+; 
+; based on Lucy's Dotfiles:
+; https://github.com/lucyy-mc/dotfiles
+
+
+; POLYBAR CONFIG
+
+; Set color variables
+[col]
+bg = ${xrdb:background}
+fg = ${xrdb:foreground}
+sel = ${xrdb:color1}
+desel = ${xrdb:color7}
+
+[layout]
+spacing = 4px
+height = 26px
+
+[bar/common]
+foreground = ${col.fg}
+background = ${col.bg}
+height = ${layout.height}
+offset-x = ${layout.spacing}
+offset-y = ${layout.spacing}
+radius = 8
+border-size = 0
+override-redirect = true
+wm-restack = i3
+font-0 = IBMPlexSans-Regular:size=11;3
+font-1 = fontawesome-webfont:size=12;3 
+font-2 = unifont-13.0.06:size=11;3
+font-3 = IBMPLexMono-Regular:size=10;3
+module-margin = 1
+padding = 1
+
+[bar/main]
+inherit = bar/common
+width = 100%:-8
+modules-left = i3
+modules-right = spotify blank vpn blank battery date time
+tray-position = right
+monitor = ${env:MONITOR:}
+
+
+
+[module/i3]
+type = internal/i3
+index-sort = true
+label-focused-foreground = ${col.sel}
+label-unfocused-foreground = ${col.desel}
+
+[module/spotify]
+type = custom/script
+exec = ~/.config/polybar/spotify/now_playing.sh
+tail = false
+click-left = ~/.config/polybar/spotify/toggle.sh
+interval = 3
+label = %output%
+
+[module/pause]
+type = custom/script
+exec = echo "do absolutely nothing"
+click-left = ~/.config/polybar/spotify/toggle.sh
+label = ⏯
+
+[module/prev]
+type = custom/script
+exec = echo "do absolutely nothing"
+click-left = ~/.config/polybar/spotify/skip_prev.sh
+label = ⏪
+
+[module/next]
+type = custom/script
+exec = echo "nothing to see here"
+click-left = ~/.config/polybar/spotify/skip_next.sh
+label = ⏩
+
+[module/playlist]
+type = custom/script
+exec = echo "nothing to see here"
+click-left = rofi -show playlist -modi "playlist:~/.config/rofi/playlists.sh"
+label = 
+[module/battery]
+type = internal/battery
+poll-interval = 5
+format-discharging = <label-discharging> <ramp-capacity>
+format-charging = <label-charging> <animation-charging>
+label-charging = %percentage%%
+label-discharging = %percentage%%
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
+#ramp-capacity-0 = 1
+#ramp-capacity-1 = 2
+#ramp-capacity-2 = 3
+#ramp-capacity-3 = 4
+#ramp-capacity-4 = 5
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+charging-framerate = 400
+
+[module/time]
+type = internal/date
+interval = 15
+time = %l:%M
+label = %time%
+
+[module/date]
+type = internal/date
+interval = 30
+date = %b %d
+label = %date%
+
+#workaround cause bars with no modules don't seem to display
+[module/blank]
+type = custom/text
+content = "  "
+
+[module/vpn]
+type = custom/script
+exec = ~/.scripts/getvpnserver.sh
+
+
+; vim: ft=dosini

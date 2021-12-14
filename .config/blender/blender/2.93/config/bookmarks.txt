@@ -1,0 +1,13 @@
+[Bookmarks]
+/home/milo/Artwork/
+[Recent]
+/home/milo/Artwork/3d/Plume-Shader/
+/home/milo/Artwork/3d/perspectiv/
+/home/milo/Pictures/
+/home/milo/Videos/obs_recordings/
+/home/milo/Artwork/3d/rx7/
+/tmp/
+/home/milo/Artwork/3d/rx7/source/
+/home/milo/Artwork/2d/2021/
+/home/milo/Artwork/textures/grunge/
+/home/milo/Videos/
