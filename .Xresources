@@ -24,7 +24,7 @@ XTerm*selectToClipboard: true
 
 !! black dark/light
 *color0:                          #242424
-*color8:                          #333333
+*color8:                          #404040
 
 !! red dark/light
 *color1:                          #ec7279
@@ -52,7 +52,7 @@ XTerm*selectToClipboard: true
 
 !! white dark/light
 *color7:                          #7f7f7f
-*color15:                         #e4e4e4
+*color15:                         #c4c4c4
 
 
 

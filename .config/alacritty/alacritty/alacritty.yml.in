@@ -6,7 +6,7 @@
 #Font configuration
 font:
   normal:
-    family: "IBM Plex Mono"
+    family: "BlexMono Nerd Font"
 
   # Point size
   #size: 11.0
