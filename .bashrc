@@ -78,11 +78,12 @@ unset use_color safe_term match_lhs sh
 
 #eval "$(starship init bash)"
 
-COL1="\[$(tput setaf 2)\]"
-COL2="\[$(tput setaf 11)\]"
+COL1="\[$(tput setaf 0)\]"
+COL2="\[$(tput setaf 5)\]"
+BG1="\[$(tput setab 0)\]"
 RESET="\[$(tput sgr0)\]"
 
-export PS1="${COL1}\w${COL2}> ${RESET}"
+export PS1="${BG1}${COL2}\w ${RESET}${COL1} ${RESET}"
 
 
 
@@ -100,6 +101,7 @@ alias viewgpu='cat /etc/X11/xorg.conf.d/10-gpu.conf'
 alias s='s-tui'
 alias hw='cd ~/homework/2021/'
 alias ls='ls -A --color'
+
 
 xhost +local:root > /dev/null 2>&1
 
