@@ -31,7 +31,7 @@ schemes:
       foreground: "0xc4c4c4"
   
     normal:
-      black: "0x404040"
+      black: "0x4c4c4c"
       red: "0xec7279"
       green: "0xa0c980"
       yellow: "0xdeb974"
@@ -41,7 +41,7 @@ schemes:
       white: "0xc4c4c4"
   
     bright:
-      black: "0x404040"
+      black: "0x4c4c4c"
       red: "0xec7279"
       green: "0xa0c980"
       yellow: "0xdeb974"
