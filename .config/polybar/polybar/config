@@ -51,34 +51,34 @@ label-unfocused-foreground = ${col.desel}
 
 [module/spotify]
 type = custom/script
-exec = ~/.config/polybar/spotify/now_playing.sh
+exec = ~/.scripts/polybar/now_playing.sh
 tail = false
-click-left = ~/.config/polybar/spotify/toggle.sh
+click-left = ~/.scripts/spotify_control/toggle.sh
 interval = 3
 label = %output%
 
 [module/pause]
 type = custom/script
 exec = echo "do absolutely nothing"
-click-left = ~/.config/polybar/spotify/toggle.sh
+click-left = ~/.scripts/spotify_control/toggle.sh
 label = ⏯
 
 [module/prev]
 type = custom/script
 exec = echo "do absolutely nothing"
-click-left = ~/.config/polybar/spotify/skip_prev.sh
+click-left = ~/.scripts/spotify_control/skip_prev.sh
 label = ⏪
 
 [module/next]
 type = custom/script
 exec = echo "nothing to see here"
-click-left = ~/.config/polybar/spotify/skip_next.sh
+click-left = ~/.scripts/spotify_control/skip_next.sh
 label = ⏩
 
 [module/playlist]
 type = custom/script
 exec = echo "nothing to see here"
-click-left = rofi -show playlist -modi "playlist:~/.config/rofi/playlists.sh"
+click-left = "~/.scripts/spotify_control/select_playlist.sh"
 label = 
 [module/battery]
 type = internal/battery
@@ -123,7 +123,7 @@ content = "  "
 
 [module/vpn]
 type = custom/script
-exec = ~/.scripts/getvpnserver.sh
+exec = ~/.scripts/polybar/getvpnserver.sh
 
 
 ; vim: ft=dosini

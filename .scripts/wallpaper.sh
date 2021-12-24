@@ -6,7 +6,7 @@ if [[ $1 =~ $re ]]; then
 	convert -size 1920x1080 xc:$1 /tmp/wall.png
 elif [ -f "$1" ]; then
 	convert $1 \
-	-resize 1920x1080 -gravity Center \
+	-resize 1920x1080^ -gravity Center \
 	-crop 1920x1080+0+0 +repage /tmp/wall.png
 else
 	convert -size 1920x1080 xc:'#ffffff' /tmp/wall.png

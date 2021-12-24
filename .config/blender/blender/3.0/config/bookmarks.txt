@@ -1,5 +1,6 @@
 [Bookmarks]
 [Recent]
+/home/milo/Pictures/wallpapers/
 /home/milo/Artwork/3d/perspectiv/anim-ytilt/
 /home/milo/Artwork/3d/perspectiv/anim-xtilt/
 /home/milo/Artwork/3d/perspectiv/anim-focal-length/
