@@ -6,4 +6,4 @@ status bar has modules for protonvpn and spotify, which display the connection s
 
 ibhagwan fork of picom is needed for the rounded corners
 
-fonts used are IBM Plex, fontawesome 4, and unifont, apparently. I don't remember what unifont is used for though so you might not need it.
+fonts used are IBM Plex and fontawesome4.
