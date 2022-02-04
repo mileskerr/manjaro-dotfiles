@@ -7,3 +7,4 @@ status bar has modules for protonvpn and spotify, which display the connection s
 ibhagwan fork of picom is needed for the rounded corners
 
 fonts used are IBM Plex and fontawesome4.
+![Alt text](https://i.redd.it/bmfc6pwqyc781.png "should look something like this")
